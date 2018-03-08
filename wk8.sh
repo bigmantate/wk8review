@@ -64,14 +64,17 @@ ln dir1/anmlay dir2/anmfight
 echo "Making a listing to look at inode ID's for link made"
 ls -iR dir*
 echo "We will take a closer look at our system now"
+sleep 2
 dmesg | less
 echo "Now looking at the kernel parameters and other specifics"
 cat /proc/cmdline
 echo "Looking at the kernel system log file"
 cat /var/log/kern.log
 echo "We will check the system runlevel"
+sleep 1.5
 who -r
 echo "Showing what runlevel is currently"
+sleep 1.5
 runlevel
 echo "Now we start running a service unit"
 systemctl start echo.socket
